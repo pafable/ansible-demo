@@ -1,0 +1,2 @@
+control_server: ansible-srv1
+web_root: /var/www/html
