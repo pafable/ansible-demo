@@ -10,9 +10,10 @@
   - debug: var=timestamp_start
   - name: install apache
     yum: pkg=httpd state=latest
-    notify: Start HTTPD
+    notify: 
+    - Start HTTPD
   - name: verify apache is running
-    command: systemctl status httpd
+    command: systemctl status httpd 
     register: result
   - debug: var=result
   - name: install client software - htop
@@ -29,4 +30,6 @@
   - debug: var=timestamp_end    
   handlers:
   - name: Start HTTPD
-    service: name=httpd state=restarted
+    service: 
+      name: httpd 
+      state: restarted
