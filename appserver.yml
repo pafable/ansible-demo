@@ -1,4 +1,4 @@
---- # master
+--- # dev
 - hosts: appserver
   vars:
     author_name: Test User
