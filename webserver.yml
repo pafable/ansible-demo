@@ -29,4 +29,6 @@
   - debug: var=timestamp_end    
   handlers:
   - name: Start HTTPD
-    service: name=httpd state=restarted
+    service: 
+      name: httpd 
+      state: restarted
