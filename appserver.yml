@@ -1,5 +1,4 @@
-<<<<<<< HEAD
---- # qa 
+--- # 11/16/18 
 - hosts: appserver
   vars:
     author_name: Test User
