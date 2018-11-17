@@ -10,12 +10,16 @@
     - conf/copyright.yml
     - conf/webdefaults.yml
   vars_prompt:
-    - name: web_domain
-      prompt: Web Domain
+    - name: pkg_name 
+      prompt: Install which package?
   tasks:
     - name: Install Apache Web Server
       action: yum name=httpd state=installed
+      async: 300
+      poll: 5
       notify: Restart HTTPD
+    - name: Install Lynx
+      action: yum name={{ pkg_name }} state=installed
   handlers:
     - name: Restart HTTPD
       action: service name=httpd state=restarted 
