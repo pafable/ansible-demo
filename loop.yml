@@ -1,4 +1,4 @@
---- # LOOP
+--- # LOOPS
 - hosts: apacheweb
   user: test
   sudo: yes
