@@ -1,0 +1,12 @@
+--- # Webplay book
+- hosts: apacheweb
+  user: test
+  sudo: yes
+  connection: ssh
+  vars_files:
+  - variables/variables.yml
+  tasks: 
+  - include: packages/packages.yml
+  - include: commands/commands.yml
+  handlers:
+  - include: handler/handler.yml
